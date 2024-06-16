@@ -28,6 +28,7 @@ void solve() {
     cin >> n;
     int a[n+1];
     graph g;
+    vector<int> candidates, uppermost;
     int max=1, new_max=1; 
     visited.assign(n+1, 0);
     g.assign(n+1, vector<int>());//empty vector??
@@ -38,14 +39,21 @@ void solve() {
         if(a[i]!=-1){
             g[i].push_back(a[i]);
             g[a[i]].push_back(i);
+        } else {
+            candidates.push_back(i);
         }
     }
     for(auto each_node : g){
         sort(each_node.begin(), each_node.end());
     }
-    for(i=1; i<=n; i++){
-        // cout << "Soy i=" << i << " " << max << " " << new_max << "\n";
-        dfs(g, i, &max, &new_max);
+    for(auto each:candidates){
+        if(g[each].size()>0)
+            uppermost.push_back(each);
+    }
+    for(auto each:uppermost){
+        // cout << "Soy i=" << each << " " << max << " " << new_max << "\n";
+        // cout << each << '\n';
+        dfs(g, each, &max, &new_max);
     }
     // if(max >= 3)
     //     cout << 3 << '\n'; //if this is the issue ima cry
