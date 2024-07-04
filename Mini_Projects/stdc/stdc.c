@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "stdc.h"
+
 //MENUS
 void dLineaHoriz(char caracter){
     int k;
