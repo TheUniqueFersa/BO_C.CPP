@@ -9,6 +9,6 @@
 
 int main (){
     //Inicializar lista
-    crearLista();
+    Lista* l = iniciarLista();
     return 0;
 }
