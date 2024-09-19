@@ -58,6 +58,7 @@ Essentia
 
 Análisis del problema (a mano)
 
+
 Resolución del problema (código)
 
 Retroalimentación
@@ -66,6 +67,9 @@ Retroalimentación
 
 # Binary Seach
 UpperBound y ___
+
+# Dp
+CSES: 1653
 
 
 ## Recursos
@@ -78,4 +82,8 @@ OmegaUp
 ## WiD
 >El punto del fallo es mejorar
 Cuando tomé la decisión, lo hice porque quería mejorar mi sentido de pensamiento y razonamiento;
-Sabía que lo más cercano a un Olímpico era una persona que participa en 
+Sabía que lo más cercano a un Olímpico era una persona que participa en competencias de este estilo.
+Ciertamente es obvio que mi alma tenía que enmendar aquel error que cometí con los Marcelinos, o conmigo mismo en la OMM o OMI.
+Esta es la razón por la que entré, pero la razón por la que me mantengo es porque quiero construir una mente competitiva.
+
+UNA DE LAS HABILIDADES ESENCIALES que se relacionan 
