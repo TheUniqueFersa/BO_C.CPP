@@ -19,7 +19,7 @@ void solve() {
     } else {
         l= r;
     }
-    if(pow(l, 2)-n > l){
+    if(pow(l, 2)-n >= l){
         cout << l*4 -2;
     } else {
         cout << l*4;
