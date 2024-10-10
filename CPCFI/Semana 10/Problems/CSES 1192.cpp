@@ -4,7 +4,7 @@ using namespace std;
 void solve() {
     int n,m, rooms = 0;
     cin >> n >> m;
-    char mapB[n][m];
+    char a[n][m];
     for(int i = 0; i<n; i++){
         for(int j=0; j<m; j++){
             cin >> a[i][j];
@@ -14,27 +14,39 @@ void solve() {
     for(int i = 0; i<n; i++){
         for(int j=0; j<m; j++){
             
-            if(a[i][j] == "."){
+            if(a[i][j] == '.'){
                 pila.push({i,j});
-                while(!pila.empty())[
+                while(!pila.empty()){
                     pair<int, int> ubi;
                     ubi = pila.top();
+                    pila.pop();
                     if(ubi.first+1 < n){
-                        if(a[ubi.first + 1][ubi.second] == "."){
-                            pila.push({i+1, j});
+                        if(a[ubi.first + 1][ubi.second] == '.'){
+                            pila.push({ubi.first+1, ubi.second});
                         }                        
                     }
                     if(ubi.second+1 < m){
-                        if(a[ubi.first + 1][ubi.second] == "."){
-                            pila.push({i, j+1});
+                        if(a[ubi.first][ubi.second+1] == '.'){
+                            pila.push({ubi.first, ubi.second+1});
                         }                        
                     }
-                    a[ubi.first][bi.second] = '#';
-                ]
+                    if(ubi.first-1 >= 0){
+                        if(a[ubi.first - 1][ubi.second] == '.'){
+                            pila.push({ubi.first-1, ubi.second});
+                        }                        
+                    }
+                    if(ubi.second-1 >= 0){
+                        if(a[ubi.first][ubi.second-1] == '.'){
+                            pila.push({ubi.first, ubi.second-1});
+                        }                        
+                    }
+                    a[ubi.first][ubi.second] = '#';
+                }
+                rooms++;
             }
-            room++;
         }
     }
+    cout << rooms;
 }
  
 int main() {
